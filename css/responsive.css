@@ -1,0 +1,619 @@
+/* =====================
+   RESPONSIVE BREAKPOINTS
+   ===================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  body {
+    padding-top: 152px !important;
+  }
+  
+  .main-homepage {
+    padding-top: 16px;
+  }
+  
+  .programme-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+/* Shrink card width on left/right for smartphones only (not tablet/PC) */
+   @media (max-width: 767px) {
+     .programme-card {
+       margin-left: 24px;
+       margin-right: 24px;
+     }
+   }
+
+/* Mobile Landscape & Small Tablets */
+@media (max-width: 768px) {
+  body {
+    padding-top: 138px !important;
+  }
+  
+  .subject-container {
+    padding: 24px 18px 20px;
+  }
+  
+  .subject-title {
+    font-size: 1.2rem;
+  }
+  
+  .cgpa-summary {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cgpa-stats {
+    justify-content: center;
+  }
+  
+  .year-tab {
+    padding: 6px 13px;
+    font-size: 0.85rem;
+  }
+  
+  .grade-select {
+    min-width: 70px;
+    font-size: 0.75rem;
+    padding: 4px 6px;
+  }
+  
+  .department-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+  
+  .dept-card {
+    padding: 14px 10px;
+  }
+  
+  .dept-icon {
+    font-size: 1.8rem;
+  }
+  
+  .dept-name {
+    font-size: 0.85rem;
+  }
+  
+  .session-title {
+    font-size: 1.3rem;
+    margin-top: 24px;
+  }
+  
+  .student-info-card {
+    padding: 16px 20px;
+  }
+  
+  .student-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .info-input {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .main-homepage {
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 40px;
+  }
+  
+  .quick-nav {
+    padding: 18px 16px;
+    margin-bottom: 28px;
+  }
+  
+  .homepage-title {
+    font-size: 1.4rem;
+  }
+  
+  .homepage-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  
+  .homepage-container {
+    padding-top: 6px;
+  }
+  
+  .back-button-container {
+    margin-top: 24px;
+    padding-top: 16px;
+    gap: 10px;
+  }
+  
+  .back-button-container .btn-search {
+    padding: 9px 22px;
+    font-size: 0.85rem;
+    min-width: 160px;
+  }
+}
+
+/* Mobile Portrait */
+@media (max-width: 640px) {
+  body {
+    padding-top: 122px !important;
+  }
+  
+  .grading-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .grading-table {
+    font-size: 0.7rem;
+  }
+  
+  .grading-table th,
+  .grading-table td {
+    padding: 6px 6px;
+  }
+  
+  .result-table th,
+  .result-table td {
+    padding: 8px 5px;
+    font-size: 0.75rem;
+  }
+  
+  .marks-range-cell {
+    font-size: 0.65rem;
+  }
+  
+  .main-homepage {
+    padding-top: 12px;
+    padding-bottom: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .quick-nav {
+    padding: 16px 14px;
+    margin-bottom: 20px;
+  }
+  
+  .quick-nav-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .quick-nav-group {
+    min-width: 100%;
+  }
+  
+  .quick-nav-actions {
+    width: 100%;
+  }
+  
+  .quick-nav-actions .btn-nav {
+    flex: 1;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .quick-nav-group select {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .homepage-title {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+  
+  .homepage-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+  }
+  
+  .homepage-container {
+    padding-top: 4px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  body {
+    padding-top: 122px !important;
+  }
+  
+  .site-header {
+    min-height: 110px;
+  }
+  
+  .header-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .subject-container {
+    padding: 20px 14px 18px;
+  }
+  
+  .stat-item {
+    min-width: 55px;
+  }
+  
+  .stat-value {
+    font-size: 1rem;
+  }
+  
+  .department-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  
+  .dept-card {
+    padding: 10px 8px;
+  }
+  
+  .dept-icon {
+    font-size: 1.5rem;
+  }
+  
+  .dept-name {
+    font-size: 0.75rem;
+  }
+  
+  .session-year {
+    font-size: 0.65rem;
+  }
+  
+  .section-divider span {
+    font-size: 0.85rem;
+  }
+  
+  /* Table - Mobile Adjustments */
+  .result-table th:nth-child(1),
+  .result-table td:nth-child(1) {
+    width: 14% !important;
+    min-width: 80px !important;
+  }
+  
+  .result-table th:nth-child(2),
+  .result-table td:nth-child(2) {
+    width: 38% !important;
+    min-width: 180px !important;
+  }
+  
+  .result-table th:nth-child(3),
+  .result-table td:nth-child(3) {
+    width: 10% !important;
+    min-width: 60px !important;
+  }
+  
+  .result-table th:nth-child(4),
+  .result-table td:nth-child(4) {
+    width: 20% !important;
+    min-width: 75px !important;
+  }
+  
+  .result-table th:nth-child(5),
+  .result-table td:nth-child(5) {
+    width: 18% !important;
+    min-width: 85px !important;
+  }
+  
+  .student-info-card {
+    padding: 14px 16px;
+  }
+  
+  .student-info-title {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+  
+  .info-label {
+    font-size: 0.7rem;
+  }
+  
+  .info-input {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+  
+  /* Scale the result table on phone screens */
+  .table-wrapper {
+    overflow: visible;
+  }
+  
+  .result-table {
+    font-size: 0.55rem;
+    table-layout: fixed;
+    min-width: 0;
+    width: 100%;
+  }
+  
+  .result-table th,
+  .result-table td {
+    padding: 4px 3px;
+    font-size: 0.55rem;
+    word-break: break-word;
+  }
+  
+  .result-table th:nth-child(1),
+  .result-table td:nth-child(1) {
+    min-width: 40px;
+    width: 12%;
+    font-size: 0.5rem;
+  }
+  
+  .result-table th:nth-child(2),
+  .result-table td:nth-child(2) {
+    min-width: 80px;
+    width: 38%;
+    font-size: 0.55rem;
+  }
+  
+  .result-table th:nth-child(3),
+  .result-table td:nth-child(3) {
+    min-width: 30px;
+    width: 8%;
+    font-size: 0.5rem;
+  }
+  
+  .result-table th:nth-child(4),
+  .result-table td:nth-child(4) {
+    min-width: 40px;
+    width: 14%;
+    font-size: 0.5rem;
+  }
+  
+  .result-table th:nth-child(5),
+  .result-table td:nth-child(5) {
+    min-width: 50px;
+    width: 28%;
+    font-size: 0.45rem;
+  }
+  
+  .result-table thead th {
+    font-size: 0.55rem !important;
+  }
+  
+  .result-table .grade-select {
+    font-size: 0.5rem;
+    padding: 2px 4px;
+    min-width: 50px;
+    width: 100%;
+  }
+  
+  .result-table .font-mono {
+    font-size: 0.5rem;
+  }
+  
+  .result-table .marks-range-cell {
+    font-size: 0.4rem;
+  }
+  
+  .result-table tfoot td {
+    font-size: 0.55rem;
+    padding: 4px 3px;
+  }
+  
+  .card-header {
+    font-size: 0.75rem;
+    padding: 10px 12px;
+  }
+  
+  .year-stats {
+    font-size: 0.6rem;
+  }
+  
+  /* Download Bar - Mobile */
+  .download-bar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+  
+  .download-bar .btn-primary,
+  .download-bar .btn-refresh {
+    font-size: 0.85rem;
+    padding: 10px 16px;
+    width: 100%;
+    border-radius: 25px;
+    text-align: center;
+  }
+  
+  /* Back Button - Mobile */
+  .back-button-container {
+    margin-top: 20px;
+    padding-top: 14px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .back-button-container .btn-search {
+    display: block;
+    width: 60%;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    border-radius: 25px;
+    min-width: unset;
+    margin: 0 auto;
+  }
+  
+  .programme-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .programme-card {
+    padding: 24px 16px 20px;
+  }
+  
+  .programme-icon {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .programme-name {
+    font-size: 1rem;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 380px) {
+  body {
+    padding-top: 108px !important;
+  }
+  
+  .main-homepage {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .quick-nav {
+    padding: 14px 12px;
+    margin-bottom: 16px;
+  }
+  
+  .quick-nav-group label {
+    font-size: 0.65rem;
+  }
+  
+  .quick-nav-group select {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .quick-nav-actions .btn-nav {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    min-width: 60px;
+  }
+  
+  .homepage-title {
+    font-size: 1.0rem;
+  }
+  
+  .homepage-subtitle {
+    font-size: 0.7rem;
+    margin-bottom: 14px;
+  }
+  
+  .homepage-container {
+    padding-top: 2px;
+  }
+  
+  .download-bar {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  
+  .download-bar .btn-primary,
+  .download-bar .btn-refresh {
+    font-size: 0.78rem;
+    padding: 8px 14px;
+    border-radius: 22px;
+  }
+  
+  .back-button-container {
+    margin-top: 16px;
+    padding-top: 12px;
+    gap: 8px;
+  }
+  
+  .back-button-container .btn-search {
+    padding: 8px 14px;
+    font-size: 0.78rem;
+    border-radius: 22px;
+  }
+}
+
+/* Extra Small */
+@media (max-width: 320px) {
+  body {
+    padding-top: 98px !important;
+  }
+  
+  .main-homepage {
+    padding-top: 8px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .quick-nav {
+    padding: 10px 8px;
+    margin-bottom: 12px;
+  }
+  
+  .quick-nav-group select {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+  
+  .quick-nav-actions .btn-nav {
+    padding: 4px 8px;
+    font-size: 0.65rem;
+    min-width: 50px;
+  }
+  
+  .homepage-title {
+    font-size: 0.85rem;
+  }
+  
+  .homepage-subtitle {
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .download-bar {
+    padding: 6px 10px;
+    gap: 6px;
+  }
+  
+  .download-bar .btn-primary,
+  .download-bar .btn-refresh {
+    font-size: 0.7rem;
+    padding: 7px 12px;
+    border-radius: 20px;
+  }
+  
+  .back-button-container {
+    margin-top: 14px;
+    padding-top: 10px;
+    gap: 6px;
+  }
+  
+  .back-button-container .btn-search {
+    padding: 7px 12px;
+    font-size: 0.7rem;
+    border-radius: 20px;
+  }
+}
+
+/* Landscape Phone */
+@media (max-height: 500px) and (orientation: landscape) {
+  .back-button-container {
+    margin-top: 12px;
+    padding-top: 10px;
+    gap: 8px;
+    flex-direction: row;
+  }
+  
+  .back-button-container .btn-search {
+    width: auto;
+    min-width: 140px;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .site-header {
+    min-height: 160px;
+  }
+}

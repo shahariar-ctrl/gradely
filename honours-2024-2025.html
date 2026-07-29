@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honours 2024-2025 - Gradely</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/buttons.css" />
+  <link rel="stylesheet" href="css/grading-badges.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- ======================================== -->
+  <!-- STICKY HEADER with Facebook-style hide    -->
+  <!-- ======================================== -->
+  <header class="sticky-header" role="banner">
+    <!-- Top: Logo + Title (centered) -->
+    <div class="site-header">
+      <div class="header-inner">
+        <img src="resource/logo.png" alt="Gradely Logo" class="header-logo" />
+        <div class="header-text">
+          <h1>Gradely</h1>
+          <p>National University Academic Result Tool</p>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom: Navigation row (white bg, shadow) -->
+    <nav class="header-nav" aria-label="Navigation">
+      <div class="header-nav-inner">
+        <a href="index.html" class="btn-nav btn-nav-home">🏠 Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-dashboard">
+    <!-- HONOURS 2024-2025 -->
+    <div class="session-section">
+      <h2 class="session-title">
+        🎓 Honours Programme 
+        <span class="program-badge">2024-2025 Session</span>
+        <span class="program-badge new-syllabus">New Syllabus</span>
+      </h2>
+      <div class="department-grid" id="session-grid"></div>
+    </div>
+
+    <!-- GRADING REFERENCE SECTION -->
+    <div class="grading-wrapper">
+      <div class="grading-section">
+        <div class="grading-grid">
+          <div class="grading-card">
+            <div class="grading-card-header">📈 Grade Scale (Honours 2024-2025)</div>
+            <div class="grading-table-wrapper">
+              <table class="grading-table" id="grade-scale-table">
+                <thead><tr><th>Numerical Grade</th><th>Letter Grade</th><th>Grade Point</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grading-card">
+            <div class="grading-card-header">🏆 Class Determination</div>
+            <div class="grading-table-wrapper">
+              <table class="grading-table">
+                <thead><tr><th>CGPA Range</th><th>Class</th></tr></thead>
+                <tbody>
+                  <tr><td>3.00 – 4.00</td><td><strong>First Class</strong></td></tr>
+                  <tr><td>2.25 – 2.99</td><td><strong>Second Class</strong></td></tr>
+                  <tr><td>2.00 – 2.24</td><td><strong>Third Class</strong></td></tr>
+                  <tr><td>Below 2.00</td><td><strong class="fail-text">Fail</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2026 Shahariar Ahammed | Educational Demo Project · All Rights Reserved</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Grading Configs -->
+  <script src="configs/grading/honours-2024-2025.js"></script>
+  
+  <!-- Core Modules -->
+  <script src="js/core/constants.js"></script>
+  <script src="js/ui/session-page.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

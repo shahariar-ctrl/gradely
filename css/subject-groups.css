@@ -1,0 +1,32 @@
+/* =====================
+   SUBJECT GROUP STYLES
+   ===================== */
+
+/* Disabled grade select - subtle visual indication */
+.grade-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f0f0f0;
+  border-color: #d0d0d0;
+}
+
+/* Hover state for disabled selects */
+.grade-select:disabled:hover {
+  cursor: not-allowed;
+}
+
+/* Focus state for disabled selects */
+.grade-select:disabled:focus {
+  outline: none;
+  border-color: #d0d0d0;
+}
+
+/* Row styling for subjects in locked groups */
+tr[data-group-locked="true"] .grade-select:disabled {
+  opacity: 0.4;
+}
+
+/* Table cell for locked subjects */
+tr[data-group-locked="true"] td {
+  opacity: 0.7;
+}

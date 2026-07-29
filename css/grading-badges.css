@@ -1,0 +1,26 @@
+/* =====================
+   GRADE BADGE COLORS
+   ===================== */
+
+.grade-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  min-width: 45px;
+  text-align: center;
+}
+
+.grade-a-plus { background: #2d7a4b; color: white; }
+.grade-a { background: #3a8c5e; color: white; }
+.grade-a-minus { background: #4a9e6e; color: white; }
+.grade-b-plus { background: #6ba87a; color: white; }
+.grade-b { background: #8bbf8f; color: #1a1a2e; }
+.grade-b-minus { background: #a8d0a8; color: #1a1a2e; }
+.grade-c-plus { background: #c5e0b4; color: #1a1a2e; }
+.grade-c { background: #dcecc4; color: #1a1a2e; }
+.grade-d { background: #f39c12; color: #1a1a2e; }
+.grade-f { background: #c0392b; color: white; }
+
+.fail-text { color: #c0392b; }

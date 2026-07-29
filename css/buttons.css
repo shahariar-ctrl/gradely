@@ -1,0 +1,183 @@
+/* =====================
+   BUTTON STYLES
+   ===================== */
+
+.btn-primary {
+  background: var(--dept-primary);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  transition: opacity 0.2s, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-refresh {
+  background: #28a745;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  transition: opacity 0.2s, transform 0.2s ease;
+}
+
+.btn-refresh:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-refresh:active {
+  transform: translateY(0);
+}
+
+.btn-search {
+  background: var(--dept-primary);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: opacity 0.2s, transform 0.2s ease;
+}
+
+.btn-search:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.btn-search:active {
+  transform: translateY(0);
+}
+
+.btn-gold {
+  background: var(--dept-gold);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #1a1a2e;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: transform 0.2s, box-shadow 0.2s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+.back-button-container {
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+/* ========================================
+   MODAL - ORIGINAL DESIGN PRESERVED
+   ======================================== */
+#downloadModal .modal-content {
+  border-radius: 30px;        /* ← ADD THIS LINE */
+  overflow: hidden;           /* ← ADD THIS LINE (keeps corners clean) */
+}
+
+#downloadModal .modal-header {
+  background: linear-gradient(135deg, #1a6fba, #12518c);
+  border-bottom: none;
+  padding: 22px 28px;
+}
+
+#downloadModal .modal-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#downloadModal .modal-title small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+}
+
+#downloadModal .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+#downloadModal .modal-body {
+  padding: 26px 28px 28px;
+  background: #f8f9fb;
+}
+
+#downloadModal .download-actions {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px dashed #d7dce2;
+  display: flex;
+  justify-content: center;
+}
+
+#downloadModal .btn-download-pdf {
+  background: linear-gradient(135deg, #1a6fba, #12518c);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 13px 34px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(26,111,186,0.35);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#downloadModal .btn-download-pdf:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #downloadModal .modal-dialog {
+    max-width: 90%;  /* ← ADD THIS */
+    margin: 0.2rem auto;  /* ← ADD THIS */
+  }
+
+  #downloadModal .modal-header {
+    padding: 16px 18px;
+  }
+  #downloadModal .modal-title {
+    font-size: 1.1rem;
+  }
+  #downloadModal .modal-title small {
+    font-size: 0.7rem;
+  }
+  #downloadModal .modal-body {
+    padding: 16px 14px 20px;
+  }
+  #downloadModal .btn-download-pdf {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    width: 100%;
+    justify-content: center;
+  }
+}

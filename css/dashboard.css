@@ -1,0 +1,198 @@
+/* =====================
+   DASHBOARD STYLES
+   ===================== */
+
+.main-dashboard {
+  flex: 1;
+  padding: 32px 24px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.session-section {
+  margin-bottom: 48px;
+}
+
+.session-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--dept-primary);
+  border-left: 5px solid var(--green-btn);
+  padding-left: 16px;
+  margin-bottom: 24px;
+}
+
+.program-badge {
+  display: inline-block;
+  background: var(--green-btn);
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+.program-badge.new-syllabus {
+  background: #c0392b;
+}
+
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.dept-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.dept-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--green-btn);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.dept-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--green-btn);
+}
+
+.dept-card:hover::before {
+  transform: scaleX(1);
+}
+
+.dept-card.coming-soon {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dept-card.coming-soon:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+.dept-card.coming-soon:hover::before {
+  transform: scaleX(0);
+}
+
+.dept-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.dept-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.dept-code {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.session-year {
+  font-size: 0.75rem;
+  color: var(--green-btn);
+  font-weight: 600;
+  margin-top: 8px;
+  background: #e8f5e9;
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.soon-badge {
+  font-size: 0.65rem;
+  margin-top: 8px;
+  color: #999;
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.grading-wrapper {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #e9ecef;
+}
+
+.grading-section {
+  margin-bottom: 32px;
+}
+
+.grading-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.grading-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s ease;
+}
+
+.grading-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.grading-card-header {
+  background: #fff;
+  padding: 14px 20px;
+  font-weight: 600;
+  color: var(--dept-primary);
+  border-bottom: 1px solid #e9ecef;
+  font-size: 1rem;
+}
+
+.grading-table-wrapper {
+  overflow-x: auto;
+  padding: 4px 16px 16px 16px;
+}
+
+.grading-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.grading-table th,
+.grading-table td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.grading-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.fail-text {
+  color: #c0392b;
+}

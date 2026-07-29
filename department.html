@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Department - Gradely</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/department-common.css" />
+  <link rel="stylesheet" href="css/student-info.css" />
+  <link rel="stylesheet" href="css/grading-badges.css" />
+  <link rel="stylesheet" href="css/buttons.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="department-page">
+
+  <header class="sticky-header" role="banner">
+    <div class="site-header">
+      <div class="header-inner">
+        <img src="resource/logo.png" alt="Gradely Logo" class="header-logo" />
+        <div class="header-text">
+          <h1>Gradely</h1>
+          <p>National University Academic Result Tool</p>
+        </div>
+      </div>
+    </div>
+    <nav class="header-nav" aria-label="Navigation">
+      <div class="header-nav-inner">
+        <a href="index.html" class="btn-nav btn-nav-home">🏠 Home</a>
+        <a href="#" class="btn-nav btn-nav-back" id="navBackBtn">← Back to Programme</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <div class="subject-container">
+
+      <div class="cgpa-summary">
+        <div>
+          <div class="cgpa-label">Overall CGPA</div>
+          <div class="cgpa-big" id="overall-cgpa">0.00</div>
+          <div class="cgpa-grade-text" id="overall-class">—</div>
+        </div>
+        <div class="cgpa-stats">
+          <div class="stat-item" id="year1-stat">
+            <div class="stat-value year-gpa">—</div>
+            <div class="stat-label">Year 1 GPA</div>
+          </div>
+          <div class="stat-item" id="year2-stat">
+            <div class="stat-value year-gpa">—</div>
+            <div class="stat-label">Year 2 GPA</div>
+          </div>
+          <div class="stat-item" id="year3-stat">
+            <div class="stat-value year-gpa">—</div>
+            <div class="stat-label">Year 3 GPA</div>
+          </div>
+          <div class="stat-item" id="year4-stat">
+            <div class="stat-value year-gpa">—</div>
+            <div class="stat-label">Year 4 GPA</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" id="overall-credit">0</div>
+            <div class="stat-label">Total Credits</div>
+          </div>
+        </div>
+        <div>
+          <button class="btn-gold" id="downloadTranscriptBtn">📥 Download Full Transcript</button>
+        </div>
+      </div>
+
+      <div class="section-divider"><span>Loading department...</span></div>
+
+      <div class="year-tabs"></div>
+      <div class="year-panels-container"></div>
+
+      <div class="back-button-container">
+        <a href="#" class="btn-search" id="navBackBtnBottom">← Back to Programme</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Shahariar Ahammed | Educational Demo Project · All Rights Reserved</p>
+  </footer>
+
+  <!-- DOWNLOAD POPUP MODAL -->
+  <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="downloadModalLabel">
+            Download Result
+            <small>Review your information, then download as PDF</small>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="student-info-card">
+            <div class="student-info-title"><span>📋</span> Student Information</div>
+            <div class="student-info-grid">
+              <div class="info-field">
+                <label class="info-label">Student Name</label>
+                <input type="text" class="info-input" id="student-name" placeholder="Enter full name" />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Father's Name</label>
+                <input type="text" class="info-input" id="student-father" placeholder="Enter father's name" />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Mother's Name</label>
+                <input type="text" class="info-input" id="student-mother" placeholder="Enter mother's name" />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Examination Roll</label>
+                <input type="number" class="info-input" id="student-exam-roll" placeholder="e.g., 1234567" />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Registration No</label>
+                <input type="number" class="info-input" id="student-reg" placeholder="e.g., 1234567890" maxlength="11" />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Examination Year</label>
+                <input type="number" class="info-input" id="student-exam-year" placeholder="e.g., 2024" />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Session</label>
+                <input type="number" class="info-input" id="student-session" placeholder="e.g., 2021-22" />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Student Type</label>
+                <select class="info-input info-select" id="student-type">
+                  <option value="">-- Select --</option>
+                  <option value="Regular">Regular</option>
+                  <option value="Irregular">Irregular</option>
+                  <option value="Improvement">Improvement</option>
+                </select>
+              </div>
+              <div class="info-field">
+                <label class="info-label">College Name</label>
+                <input type="text" class="info-input" id="student-college" placeholder="e.g., Government College, Dhaka" />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Subject</label>
+                <input type="text" class="info-input" id="student-subject" disabled />
+              </div>
+              <div class="info-field">
+                <label class="info-label">Subject Result</label>
+                <input type="text" class="info-input" id="student-subject-result" value="In Progress" disabled />
+              </div>
+              <div class="info-field">
+                <label class="info-label">CGPA</label>
+                <input type="text" class="info-input" id="student-final-gpa" value="0.00" disabled />
+              </div>
+            </div>
+          </div>
+
+          <div class="download-actions">
+            <button type="button" class="btn-download-pdf" id="downloadPdfBtn">🖨️ Download PDF</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="configs/grading/honours-2013-2014.js"></script>
+  <script src="configs/grading/honours-2024-2025.js"></script>
+  <script src="configs/grading/degree-2013-2014.js"></script>
+  <script src="configs/grading/degree-2024-2025.js"></script>
+  
+  <script src="js/core/constants.js"></script>
+  <script src="js/core/grading-system.js"></script>
+  <script src="js/core/calculator.js"></script>
+  <script src="js/core/subject-groups.js"></script>
+  
+  <script src="js/ui/grade-dropdown.js"></script>
+  <script src="js/ui/year-tabs.js"></script>
+  <script src="js/ui/student-info.js"></script>
+  
+  <script src="js/export/download-helper.js"></script>
+  <script src="js/export/year-result.js"></script>
+  <script src="js/export/transcript.js"></script>
+  
+  <script src="js/result/subject-result.js"></script>
+  
+  <script src="js/init.js"></script>
+  <script src="js/app.js"></script>
+  
+  <script>
+    (function() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var type = urlParams.get('type');
+      var session = urlParams.get('session');
+      
+      var sessionPage = '';
+      if (type === 'honours' && session === '2013-2014') sessionPage = 'honours-2013-2014.html';
+      else if (type === 'honours' && session === '2024-2025') sessionPage = 'honours-2024-2025.html';
+      else if (type === 'degree' && session === '2013-2014') sessionPage = 'degree-2013-2014.html';
+      else if (type === 'degree' && session === '2024-2025') sessionPage = 'degree-2024-2025.html';
+      else sessionPage = 'index.html';
+      
+      var topBackBtn = document.getElementById('navBackBtn');
+      var bottomBackBtn = document.getElementById('navBackBtnBottom');
+      if (topBackBtn) topBackBtn.href = sessionPage;
+      if (bottomBackBtn) bottomBackBtn.href = sessionPage;
+    })();
+  </script>
+</body>
+</html>
