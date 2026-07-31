@@ -7,7 +7,7 @@ window.subjectData = {
   shortName: "19 - Political Science",
   educationType: "honours",
   syllabus: "2013-2014",
-  totalCredits: 128,
+  totalCredits: 120,
   
   years: {
     1: {
